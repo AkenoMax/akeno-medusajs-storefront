@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://akeno-pl.netlify.app",
+  "baseUrl": "https://akeno-medusajs-storefront-production.up.railway.app",
   "env": {
     "codeCoverage": {
       "url": "/api/__coverage__"
