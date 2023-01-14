@@ -5,7 +5,13 @@ module.exports = withStoreConfig({
   features: store.features,
   reactStrictMode: true,
   images: {
-    domains: ["medusa-public-images.s3.eu-west-1.amazonaws.com", "akeno-pl.netlify.app"],
+    domains: [
+      "medusa-public-images.s3.eu-west-1.amazonaws.com",
+      "akeno-pl.netlify.app",
+      "akeno-medusajs-admin-production.up.railway.app",
+      "akeno-medusajs-storefront-production.up.railway.app",
+      "akeno.pl"
+    ],
   },
 })
 
