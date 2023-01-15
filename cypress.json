@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://akeno-medusajs-storefront-production.up.railway.app",
+  "baseUrl": "https://api.akeno.pl",
   "env": {
     "codeCoverage": {
       "url": "/api/__coverage__"
