@@ -7,6 +7,8 @@ module.exports = withStoreConfig({
   images: {
     domains: [
       "medusa-public-images.s3.eu-west-1.amazonaws.com",
+      "https://minio.kaptacz.com:9000",
+      "minio.kaptacz.com",
       "akeno-pl.netlify.app",
       "akeno-medusajs-admin-production.up.railway.app",
       "akeno-medusajs-storefront-production.up.railway.app",
