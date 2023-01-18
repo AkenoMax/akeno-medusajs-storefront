@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  Medusa Next.js Starter
+  Medusa Next.js Starter AKENO
 </h1>
 
 <p align="center">
