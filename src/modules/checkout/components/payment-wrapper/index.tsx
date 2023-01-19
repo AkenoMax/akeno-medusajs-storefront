@@ -19,6 +19,13 @@ const Wrapper: React.FC<WrapperProps> = ({ paymentSession, children }) => {
           {children}
         </StripeWrapper>
       )
+    case "stripe-blik":
+      return (
+        <StripeWrapper paymentSession={paymentSession}>
+          {children}
+        </StripeWrapper>
+      )
+
 
     default:
       return <div>{children}</div>

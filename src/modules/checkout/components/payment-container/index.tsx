@@ -3,6 +3,7 @@ import Radio from "@modules/common/components/radio"
 import clsx from "clsx"
 import React from "react"
 import PaymentStripe from "../payment-stripe"
+import PaymentStripeBlik from "../payment-stripe-blik"
 import PaymentTest from "../payment-test"
 
 type PaymentContainerProps = {
@@ -84,6 +85,12 @@ const PaymentElement = ({
       return (
         <div className="pt-8 pr-7">
           <PaymentStripe />
+        </div>
+    )
+    case "stripe-blik":
+      return (
+        <div className="pt-8 pr-7">
+          <PaymentStripeBlik />
         </div>
       )
     case "manual":

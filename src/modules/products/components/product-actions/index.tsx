@@ -59,9 +59,9 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
             <span
               className={clsx("text-xl-semi", {
                 "text-rose-600": selectedPrice.price_type === "sale",
-              })}
-            >
-              {selectedPrice.calculated_price}
+              })} 
+            > 
+              {selectedPrice.calculated_price}<a className="text-sm text-gray-600"> + tax</a>
             </span>
             {selectedPrice.price_type === "sale" && (
               <>

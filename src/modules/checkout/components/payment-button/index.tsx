@@ -47,6 +47,10 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ paymentSession }) => {
       return (
         <StripePaymentButton session={paymentSession} notReady={notReady} />
       )
+    case "stripe-blik":
+      return (
+        <StripePaymentButton session={paymentSession} notReady={notReady} />
+      )
     case "manual":
       return <ManualTestPaymentButton notReady={notReady} />
     case "paypal":
