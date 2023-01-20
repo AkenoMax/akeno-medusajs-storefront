@@ -7,8 +7,8 @@ const FooterNav = () => {
   const { collections } = useCollections()
 
   return (
-    <div className="w-full bg-black text-white">
-    <div className="content-container   flex flex-col gap-y-8 pt-16 pb-8 ">
+    <div className="w-full h-full bg-black text-white">
+    <div className="content-container flex flex-col gap-y-8 pt-16 pb-8 ">
       <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between mx-6">
         <div>
           <Link href="/">
@@ -37,25 +37,25 @@ const FooterNav = () => {
             <ul className="grid grid-cols-1 gap-y-2">
               <li>
                 <a
-                  href="/about"
+                  href="/content/contact"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  About 
+                  Contact 
                 </a>
               </li>
               <li>
                 <a
-                  href="/contact"
+                  href="/content/shipping"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Contact
+                  Shipping
                 </a>
               </li>
               <li>
                 <a
-                  href="/privacy-policy"
+                  href="/content/privacy-policy"
                   target="_blank"
                   rel="noreferrer"
                 >

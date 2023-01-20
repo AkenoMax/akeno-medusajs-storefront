@@ -29,7 +29,7 @@ const CartTemplate = () => {
               <div className="flex flex-col gap-y-8 sticky top-12">
                 {cart && cart.region && (
                   <>
-                    <div className="bg-black p-6">
+                    <div className="bg-white p-6 border-2 border-black">
                       <Summary cart={cart} />
                     </div>
                     <div className="bg-white p-6">

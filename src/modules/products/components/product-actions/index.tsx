@@ -12,7 +12,7 @@ type ProductActionsProps = {
 }
 
 const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
-  const { updateOptions, addToCart, options, inStock, variant } =
+  const { updateOptions, addToCart, options, inStock, LowStock, variant } =
     useProductActions()
 
   const price = useProductPrice({ id: product.id, variantId: variant?.id })
@@ -52,8 +52,8 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
           })}
         </div>
       )}
-
-      <div className="mb-4">
+      <a className="text-sm text-rose-600"> {!LowStock ? "Only few left!" : ""} </a>
+      <div className="mb-2">
         {selectedPrice ? (
           <div className="flex flex-col text-gray-700">
             <span
@@ -61,8 +61,8 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
                 "text-rose-600": selectedPrice.price_type === "sale",
               })} 
             > 
-              {selectedPrice.calculated_price}<a className="text-sm text-gray-600"> + tax</a>
-            </span>
+              {selectedPrice.calculated_price}<a className="text-sm text-gray-600"> + tax</a>           
+            </span>            
             {selectedPrice.price_type === "sale" && (
               <>
                 <p>

@@ -7,8 +7,8 @@ import { NextPageWithLayout } from "types/global"
 const NotFound: NextPageWithLayout = () => {
   return (
     <>
-      <Head title="404" description="Something went wrong" />
-      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)]">
+      <Head title="Privacy Policy" description="..." />
+      <div className="content-container flex flex-col items-center justify-center min-h-[calc(100vh-64px)]">
       <h1>Privacy Policy for AKENO</h1>
 
 <p>At akeno.pl, accessible from https://akeno.pl/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by akeno.pl and how we use it.</p>

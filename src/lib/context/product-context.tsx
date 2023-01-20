@@ -1,4 +1,5 @@
 import { canBuy } from "@lib/util/can-buy"
+import { lowStock } from "@lib/util/lowStock"
 import { findCheapestPrice } from "@lib/util/prices"
 import isEqual from "lodash/isEqual"
 import { formatVariantPrice, useCart } from "medusa-react"
@@ -17,6 +18,7 @@ interface ProductContext {
   quantity: number
   disabled: boolean
   inStock: boolean
+  LowStock: boolean
   variant?: Variant
   maxQuantityMet: boolean
   options: Record<string, string>
@@ -41,6 +43,7 @@ export const ProductProvider = ({
   const [options, setOptions] = useState<Record<string, string>>({})
   const [maxQuantityMet, setMaxQuantityMet] = useState<boolean>(false)
   const [inStock, setInStock] = useState<boolean>(true)
+  const [LowStock, setLowStock] = useState<boolean>(true)
 
   const { addItem } = useStore()
   const { cart } = useCart()
@@ -114,6 +117,12 @@ export const ProductProvider = ({
     }
   }, [variant])
 
+  useEffect(() => {
+    if (variant) {
+      setLowStock(lowStock(variant))
+    }
+  }, [variant])
+
   const updateOptions = (update: Record<string, string>) => {
     setOptions({ ...options, ...update })
   }
@@ -154,6 +163,7 @@ export const ProductProvider = ({
         maxQuantityMet,
         disabled,
         inStock,
+        LowStock,
         options,
         variant,
         addToCart,

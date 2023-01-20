@@ -5,9 +5,9 @@ import React from "react"
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Nav />
-      <main className="relative">{children}</main>
+      <main className="relative flex-grow">{children}</main>
       <Footer />
       <CookieConsent />
     </div>
