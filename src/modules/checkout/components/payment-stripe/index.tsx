@@ -16,16 +16,6 @@ const PaymentStripe: React.FC = () => {
     | StripeCardExpiryElementOptions
     | StripeCardCvcElementOptions = useMemo(() => {
     return {
-      style: {
-        base: {
-          fontFamily: "Inter, sans-serif",
-          color: "#424270",
-          padding: "10px 12px",
-          "::placeholder": {
-            color: "#CFD7E0",
-          },
-        },
-      },
     }
   }, [])
 
